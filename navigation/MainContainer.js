@@ -6,11 +6,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 // paginas
 import Inicio from './paginas/inicio';
 import Contatos from './paginas/contatos';
-import Perfil from './paginas/perfil';
+import Lojas from './paginas/lojas';
 
 const inicioNome = "Inicio";
 const contatosNome = "Contatos";
-const perfilNome = "Lojas";
+const lojasNome = "Lojas";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +30,7 @@ function MainContainer() {
           } else if (rn === contatosNome) {
             iconName = focused ? 'people-outline' : 'people-outline';
 
-          } else if (rn === perfilNome) {
+          } else if (rn === lojasNome) {
             iconName = focused ? 'cart-outline' : 'cart-outline';
           }
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -40,13 +40,14 @@ function MainContainer() {
         activeTintColor: 'purple',
         inactiveTintColor: 'grey',
         labelStyle: { paddingBottom: 10, fontSize: 10 },
-        style: { padding: 10, height: 70},
+        style: { padding: 10, height: 70, backgroundColor: 'rgba(255, 255, 255, 0.5)'},
         showLabel: false
-      }}>
+      }}
+      >
 
       <Tab.Screen name={inicioNome} component={Inicio} />
       <Tab.Screen name={contatosNome} component={Contatos} />
-      <Tab.Screen name={perfilNome} component={Perfil} />
+      <Tab.Screen name={lojasNome} component={Lojas} />
 
     </Tab.Navigator>
     </NavigationContainer>

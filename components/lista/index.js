@@ -39,14 +39,11 @@ const renderItem = ({ item }) => (
 
 export const Lista = () => {
   return (
+    
     <FlatList
       data={data}
       renderItem={renderItem}
       keyExtractor={(item) => item.id}
-      ListHeaderComponent={
-        <Text style={styles.baseLineTexTitle}>Minha Lista</Text>
-      }
-      stickyHeaderIndices={[0]}
     />
   );
 }

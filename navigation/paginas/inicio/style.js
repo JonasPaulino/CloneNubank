@@ -1,7 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-   container: {
+   scrollView: {
+      flex: 1,
       backgroundColor: 'white',
-    }
+    },
+    container: {
+      flex: 1,
+      backgroundColor: 'white',
+    },
 });
