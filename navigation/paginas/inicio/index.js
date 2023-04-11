@@ -13,11 +13,11 @@ export default function Inicio() {
         <ScrollView style={styles.scrollView}>
             <View style={styles.container}>
                 <Header />
-                <Conta />
+                <Conta saldo={'6.500,00'}/>
                 <IconBar />
                 <Cartoes />
                 <Noticias />
-                <Fatura />
+                <Fatura total={'3.277,77'}/>
             </View>
         </ScrollView>
     );
