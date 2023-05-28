@@ -9,10 +9,14 @@ baseLine: {
         marginBottom: 10,
         },
 baseLineImg: {
-        width: 50,
-        height: 50,
+        width: 34,
+        height: 34,
         borderRadius: 25,
         marginRight: 10,
+        // borderRadius: 25,
+        // marginRight: 10,
+        // borderWidth: 1,
+        // borderColor: 'black',
     },
     baseLineTex: {
         fontWeight: 'bold',
