@@ -31,4 +31,23 @@ export default StyleSheet.create({
         padding: 10,
         width: '100%'
       },
+      botao:{
+        backgroundColor: '#9434ed',
+        width: 50,
+        height: 50,
+        borderRadius: 50, 
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      backgroundImage: {
+        width: 35,
+        height: 35,
+      },
+      botaoContainer:{
+        flex:1,
+        width: '80%',
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+        marginBottom: 20
+      }
 });

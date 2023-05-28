@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, ImageBackground, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { HeaderBackButton } from '@react-navigation/stack';
 import { AppContext } from '../../../context';
@@ -9,6 +9,11 @@ import styles from './style';
 export default function PIX() {
   const navigation = useNavigation();
   const { saldoConta, setSaldoConta } = useContext(AppContext);
+
+  const handlePress = () => {
+    // Ação a ser executada quando o botão for pressionado
+    console.log('Botão pressionado!');
+  };
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -31,8 +36,14 @@ export default function PIX() {
           
           />
       </View>
-      <View>
-        
+      <View style={styles.botaoContainer}>
+        <TouchableOpacity style={styles.botao} onPress={handlePress}>
+          <ImageBackground
+            source={require('../../../assets/arrow-right-thin-custom.png')}
+            style={styles.backgroundImage}
+            resizeMode="cover"
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
