@@ -10,22 +10,32 @@ import { AppProvider } from '../context';
 import Inicio from './paginas/inicio';
 import Contatos from './paginas/contatos';
 import Lojas from './paginas/lojas';
-import PIX from './paginas/pix';
+import PIX from './paginas/pix/valor';
+import PESSOA from './paginas/pix/pessoa';
+import RESUMO from './paginas/pix/resumo';
 
 const inicioNome = "Inicio";
 const contatosNome = "Contatos";
 const lojasNome = "Lojas";
-const pixNome = "PIX";
+const pixValor = "PIX";
+const pixPessoa = "PESSOA";
+const pixResumo = "RESUMO";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-function PixStack() {
+function Stacks() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={pixNome}
+        name={pixValor}
         component={PIX} />
+      <Stack.Screen
+        name={pixPessoa}
+        component={PESSOA} />
+      <Stack.Screen
+        name={pixResumo}
+        component={RESUMO} />
     </Stack.Navigator>
   );
 }
@@ -67,7 +77,9 @@ function MainContainer() {
           <Tab.Screen name={inicioNome} component={Inicio} />
           <Tab.Screen name={contatosNome} component={Contatos} />
           <Tab.Screen name={lojasNome} component={Lojas} />
-          <Tab.Screen name={pixNome} component={PixStack} options={{ tabBarButton: () => null }} />
+          <Tab.Screen name={pixValor} component={Stacks} options={{ tabBarButton: () => null }} />
+          <Tab.Screen name={pixPessoa} component={Stacks} options={{ tabBarButton: () => null }} />
+          <Tab.Screen name={pixResumo} component={Stacks} options={{ tabBarButton: () => null }} />
         </Tab.Navigator>
       </NavigationContainer>
     </AppProvider>

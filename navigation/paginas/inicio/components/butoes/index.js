@@ -8,7 +8,6 @@ const IconItem = ({ icon }) => {
   const navigation = useNavigation();
 
   const handleIconPress = () => {
-    console.log(icon.pagina);
     navigation.navigate(icon.pagina);
   };
 

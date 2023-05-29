@@ -5,13 +5,17 @@ const AppContext = createContext();
 function AppProvider({ children }) {
   const [saldoConta, setSaldoConta] = useState('');
   const [totalFatura, setTotalFatura] = useState('');
+  const [valorDigitado, setValorDigitado] = useState('');
+
 
 
   const contextValue = {
     saldoConta,
     setSaldoConta,
     totalFatura,
-    setTotalFatura
+    setTotalFatura,
+    valorDigitado, 
+    setValorDigitado
   };
 
   return (
